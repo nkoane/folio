@@ -8,17 +8,25 @@ main {
     justify-content: space-between;
     height: 100vh;
     place-items: center;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 main header {
-    background-color: yellow;
+    width: 10%;
+    text-align: right;
+}
+
+main header nav {
+    display: flex;
+    flex-direction: column;
 }
 
 main section {
-    background-color: red;
     width: 80%;
 }
 
 main footer {
-    background-color: blue;
+    text-align: right;
+    font-size: 0.8rem;
 }
