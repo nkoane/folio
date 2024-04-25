@@ -10,6 +10,7 @@ main {
     place-items: center;
     width: 80vw;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 main header {
@@ -37,7 +38,97 @@ main section {
     width: 80%;
 }
 
+main section img.bw {
+    filter: saturate(0);
+    transform: scaleY(-1);
+}
+
 main footer {
     text-align: right;
     font-size: 0.8rem;
+}
+
+/* ------------------------- this is where all the magic happens ----------------------- */
+
+main header {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slide-right 1s 0s forwards;
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*
+main:hover header {
+    transform: translateX(0);
+    opacity: 1;
+}*/
+
+main section p.top {
+    transform: translateY(-100%);
+    opacity: 0.1;
+    animation: slide-down 0.5s 0.5s forwards;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0.1;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main section p.bottom {
+    transform: translateY(100%);
+    opacity: 0.1;
+    animation: slide-up 0.5s 1.75s forwards;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0.1;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main footer {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slide-left 0.75s 1.5s forwards;
+}
+
+@keyframes slide-left {
+    from {
+        opacity: 0.5;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main:hover footer {
+    transform: translateX(0);
+    opacity: 1;
 }
