@@ -6,6 +6,8 @@ body {
 main {
     display: flex;
     justify-content: space-between;
+    height: 100vh;
+    place-items: center;
 }
 
 main header {
@@ -14,6 +16,7 @@ main header {
 
 main section {
     background-color: red;
+    width: 80%;
 }
 
 main footer {
